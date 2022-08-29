@@ -1,20 +1,20 @@
 import React from 'react';
-import { GoLocation } from 'react-icons/go';
+import { IoIosPin } from 'react-icons/io';
 
-export default function BlogPost() {
+export default function BlogPost(props) {
     return (
         <div className='blog--wrapper'>
-            <img src='images/travel1.png' className='blog--image' alt="blog image"/>
+            <img src= {`images/${props.imageUrl}`} className='blog--image' alt="blog"/>
             <div className='blog-post-container'>
                 <div className='blog-post-header'>
-                    <GoLocation />
-                    <p className='blog-post-header-country'>JAPAN</p>
-                    <a href='https://maps.google.com' className='blog-post-header-link'>View on google maps</a>
+                    <IoIosPin className='location-icon'/>
+                    <p className='blog-post-header-country'>{props.location}</p>
+                    <a href={props.googleMapsUrl} className='blog-post-header-link'>Viw on google maps</a>
                 </div>
-                <h1 className='blog-post-title'>Mount Fuji</h1>
-                <p className='blog-post-date'>12 Jan, 2022 - 24 Jan, 2022</p>
+                <h1 className='blog-post-title'>{props.title}</h1>
+                <p className='blog-post-date'>{props.startDate} - {props.endDate}</p>
                 <div className='blog-post-details'>
-                    Mount Fuji is the tallest mountain in Japan, standing at 3,776 meters (12,380 feet). Mount Fuji is the single most popular tourist site in Japan, for both Japanese and foreign tourists.
+                    {props.description}
                 </div>
             </div>
         </div>
