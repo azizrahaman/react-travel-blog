@@ -33,11 +33,35 @@
     gap: 30px;
     justify-content: center;
     align-items: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'inter';
 }
 
 .blog-post-header {
     display: flex;
-    gap: 10px;
+    margin-bottom: 5px;
+    align-items: center;
+    font-size: 16px;
+    margin-left: -2px;
+    font-weight: 400;
+}
+
+.location-icon {
+    color: #F55A5A;
+    fill: #F55A5A;
+    font-size: 20px;
+}
+
+.blog-post-header a {
+    margin-left: 10px;
+    color: rgb(146, 146, 146);
+    text-underline-position: unset;
+}
+
+.blog-post-title {
     margin-bottom: 10px;
+}
+
+.blog-post-date {
+    font-weight: 600;
+    padding: 10px 0;
 }
